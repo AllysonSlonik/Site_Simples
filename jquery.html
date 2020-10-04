@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JQuery</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+    
+
+      /* Animating the square or an element*/
+
+      $(document).ready(function(){
+        $("#btnRight").click(function(){
+          $("#square").animate({left: '250px'});
+        });
+      });
+
+      $(document).ready(function(){
+        $("#btnLeft").click(function(){
+          $("#square").animate({left: '0'});
+        });
+      });
+
+      $(document).ready(function(){
+        $("#btnDown").click(function(){
+          $("#square").animate({top: '250px'});
+        });
+      });
+
+      $(document).ready(function(){
+        $("#btnUp").click(function(){
+          $("#square").animate({top: '0px'});
+        });
+      });
+
+      $(document).ready(function(){
+        $("#btnGo").click(function(){
+          $("#square").animate({
+            left: '250px',
+            top: '250px',
+          });
+        });
+      });
+
+      $(document).ready(function(){
+        $("#btnReset").click(function(){
+          $("#square").animate({
+            left: '0',
+            top: '0'
+          });
+        });
+      });
+      
+      /* HIDE and SHOW an element*/
+
+      $(document).ready(function(){
+        $("#btnDouble").dblclick(function(){
+          $(this).hide();          
+        });
+      });
+
+      $(document).ready(function(){
+        $("#btnShow").click(function(){
+          $("#btnDouble").show();
+        });
+      });
+
+      /* HOVER OVER*/
+
+      $(document).ready(function(){
+        $("#pMessage").hover(function(){
+          $(this).css("background-color", "grey");
+        });
+      });
+
+      /* FOCUS/BLUR a form */
+
+      $(document).ready(function(){
+        $("input").focus(function(){
+          $(this).css("background-color", "grey");
+        });
+        $("input").blur(function(){
+          $(this).css("background-color", "white")
+        });
+      });
+
+      /* Fade In, Fade Out */
+      $(document).ready(function(){
+        $("#btnFOut").click(function(){
+          $("#sq1").fadeOut();
+          $("#sq2").fadeOut("slow");
+          $("#sq3").fadeOut(3000);
+        });
+      });
+
+      $(document).ready(function(){
+        $("#btnFIn").click(function(){
+          $("#sq1").fadeIn();
+          $("#sq2").fadeIn("slow");
+          $("#sq3").fadeIn(3000);
+        });
+      });
+
+    </script> 
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-sm bg-primary navbar-primary">
+      <!-- Brand/logo -->
+    <a href="#" class="navbar-brand">
+      <img id="img_logo" src="img/logo.png.png" alt="logo">
+    </a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="jquery.html" class="nav-link">Jquery</a></li>
+      <li class="nav-item"><a href="javascript.html" class="nav-link">Javascript</a></li>
+      <li class="nav-item"><a href="download.html" class="nav-link">Downloads</a></li>
+      <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">First</a>
+            <a href="#" class="dropdown-item">Second</a>
+            <a href="#" class="dropdown-item">Third</a>
+            <div class="dropdown-divider"></div>
+          </div>
+      </li>
+    </ul>
+
+    <!--TO THE RIGHT USE A NEW UL CLASS: W/ ML-AUTO-->
+    <!--TO THE LEFT USE A NEW YL CLASS: W/ MR-AUTO-->
+    <ul class="navbar-nav ml-auto nav-justified">
+
+      <li class="nav-item "><a href="#" class="nav-link"><i class="fa fa-fw fa-user"></i>Login</a></li>
+
+      <!-- Search form -->
+      <input class="form-control form-inline h-50 w-50" type="text" placeholder="Search" aria-label="Search"> 
+    
+    </ul>
+
+  </nav>
+
+  <div id="firstScreen" class="container-fluid">
+
+    <div id="textOne" class="content-fluid" >
+      <h1>Jquery Animate Function</h1>
+      <p>
+        To do it you have to use the document.ready in order to load the elements of the page first and then start using them. Inside you use the animate() function.
+        $(document).ready(function(){
+        $("#btnDown").click(function(){
+          $("#square").animate({top: '250px'});
+        });
+      });
+    </p>
+
+    </div>
+
+  <div class="container-fluid" id="buttonsPosition">
+    <button id="btnLeft" class="btn btn-secondary">LEFT</button>
+    <button id="btnRight" class="btn btn-secondary">RIGHT</button>
+    <button id="btnDown" class="btn btn-secondary">DOWN</button>
+    <button id="btnUp" class="btn btn-secondary">UP</button>
+    <button id="btnGo" class="btn btn-warning">GO</button>
+    <button id="btnReset" class="btn btn-danger">RESET</button>
+  </div>
+      
+  <div class="container" id="squarePosition">
+        
+    <div id="square"></div>
+          
+  </div>
+  </div>
+
+  <div id="secondScreen" class="container-fluid">
+
+    <div id="textTwo">
+      <h1>Focus, Blur and Hover</h1>
+      <p>They don't need the animate() function to work, but you can use it if you want to animate something.</p>
+      <p>Focus and Blur are for forms, you can see more on the focus() section.</p>
+      <p>Hover, whenever you hover over an item, it will perform some action, the coding for it is similar to blur and focus since you DON'T need to use the animate() function.</p>
+    </div>
+
+    <div class="container-fluid" id="buttonsPosition2">
+      <button id="btnDouble" class="btn btn-secondary">DOUBLE</button>
+      <button id="btnShow" class="btn btn-secondary">SHOW</button>
+
+      <p id="pMessage" class="d-flex justify-content-center">focus() functon = whenever you click inside a form field it can change its state. blur() whenever you click outside the form field it change its state.</p>
+
+      <form action="#" method="post">
+        Name: <input type="text" name="fullname"><br>
+        Passw: <input type="password" name="password"><br>
+        
+      </form>
+    </div>
+  </div>
+
+  <div id="thirdScreen" class="container-fluid">
+    
+    <div id="textThree">
+      <h1>Fade In/Out</h1>
+      <p>Fade Out = use the element.fadeOut(), use a trigger like a button.</p>
+      <p>For 'fade in' is the same process and it'll show the element back into the page.</p>
+      <p>You can add attributes like "slow" or 3000 to manipulate the process.</p>
+    </div>
+
+    <div id="allSq">
+    <div id="sq1"></div>
+    <div id="sq2"></div>
+    <div id="sq3"></div>
+  
+    </div>
+
+    <div id="btnFade">
+    <button id="btnFIn" class="btn btn-warning">Fade In</button>
+    <button id="btnFOut" class="btn btn-danger">Fade Out</button>
+    </div>
+
+  </div>
+
+
+  <div class="container-fluid bg-dark ">
+    
+    <footer class="footer-copyright py-3">
+      <i class="fa fa-copyright" aria-hidden="true"> 2020. Todos os direitos reservados.</i>
+    </footer>
+  </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,181 @@
+#img_logo{
+  max-height: 40px;
+}
+
+nav .navbar-nav li a{
+  color:black !important;
+  }
+.nav-item > a:hover {
+  color: rgb(192, 192, 5) !important;
+}
+
+.carousel-inner > .carousel-item > img {
+  height: 100vh;
+}
+
+/* First Screen from JQUERY*/
+
+#firstScreen{
+  width: 100%;
+  height: 570px;
+  background-color: grey;
+}
+
+#textOne{
+  width: 550px;
+  height: 220px;
+  top: 150px;
+  position: relative;
+  
+}
+
+#squarePosition{
+  background-color: teal;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top:320px;
+  left: 830px;
+}
+
+#square{
+  background:#b3f106;
+  height:50px;
+  width:50px;
+  position:absolute;
+  left: 0;
+}
+
+#buttonsPosition{
+  background-color: teal;
+  width: 450px;
+  height: 200px;
+  border: 3px solid grey;
+  margin-top: 20px;
+  float: right;
+  position: absolute;
+  top: 80px;
+  left: 750px;
+}
+
+/* Screen 2 from JQUERY*/
+
+#secondScreen{
+  width: 100%;
+  height: 500px;
+  background-color: blue;
+  position: relative
+}
+
+#buttonsPosition2{
+  background-color: green;
+  width: 450px;
+  height: 200px;
+  border: 3px solid grey;
+  position: absolute;
+  top: 180px;
+  left: 750px;
+}
+
+#textTwo{
+  width: 560px;
+  height: 230px;
+  top: 150px;
+  position: absolute;
+  text-decoration-color: black; 
+  
+}
+
+/* Third Container */
+
+#thirdScreen{
+  width: 100%;
+  height: 480px;
+  position: relative;
+  background-color: grey;  
+}
+
+#textThree{
+  position: relative;
+  top: 100px;
+}
+
+#btnFade{
+  position: relative;
+  top: -200px;
+  left: 840px;
+}
+
+
+#allSq{
+   left: 900px;
+   top: 70px;
+   position: absolute;
+}
+
+#sq1{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  position: relative;
+}
+
+#sq2{
+  width: 100px;
+  height: 100px;
+  background-color: indigo;
+  position: relative;
+  top: 10px;
+}
+
+#sq3{
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  position: relative;
+  top:20px;
+}
+
+#btnFIn{
+  position: relative;
+  top: 40px;
+  right: 35px;
+}
+
+#btnFOut{
+  position: relative;
+  top: 40px;
+  right: 35px
+}
+
+
+/* Scroll Spy */
+#sspy{
+  position: relative;
+  
+}
+
+#section1, #section2, #section3, #section4{
+  padding-top:70px;
+  padding-bottom:70px;
+  width: 100%;
+}
+
+
+#container1{
+  
+  height: 200px;
+  background-color: blue;
+}
+
+#container2{
+  
+  height: 100px;
+  background-color: orange;
+}
+
+#container3{
+  height: 200px;
+  background-color: orangered;
+}
+

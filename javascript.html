@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript tests.</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body> 
+ 
+
+<div id="container2" class="container-fluid">
+
+  <h1 id="passedText"></h1>
+
+  <script>
+  var newArray = ["Oranges","Apples","Grapples","Strawberries","Pinneaples"];
+  var fillArray = " ";
+
+  for(var i = 0; i < newArray.length; i++){
+    fillArray = fillArray + newArray[i] + " ";
+    
+  }
+
+  document.getElementById("passedText").innerHTML = fillArray;
+
+  </script>
+</div>
+
+<div class="container-fluid" id="container3">
+<h1>Guess a number between 1 - 10</h1>
+
+<form action="#" method="POST">
+<label for="lguess">Take a Guess: </label><br>
+<input type="text" id="userGuess" required>
+<input type="submit" id="btnUserGuess" value="ENTER!" onClick="checkAnswer()">
+</form>
+
+<p id="paragraph"></p>
+
+<script>
+  function checkAnswer(){
+    var correctAnswer = 6;
+    var uguess = document.getElementById("userGuess").value;
+    var numofGuesses = 1;
+
+  
+  if(uguess >= 1 && uguess <= 10){
+    if(uguess == correctAnswer){
+      document.getElementById("paragraph").innerHTML = "CORRECT ANSWER! " + numofGuesses;
+      numofGuesses++;
+    } else{
+      document.getElementById("paragraph").innerHTML = "WRONG ANSWER! " + numofGuesses ;
+      numofGuesses++;
+    }
+} else{
+  document.getElementById("paragraph").innerHTML = "PICK A VALID NUMBER BETWEEN 01 AND 10.";
+      }
+    }
+
+    if(numofGuesses == 4){
+    document.getElementById("paragraph").innerHTML = "GAME OVER!";
+  }
+    
+  
+
+
+</script>
+
+</div>
+
+</body>
+</html>
